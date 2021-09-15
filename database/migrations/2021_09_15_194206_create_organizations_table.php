@@ -14,12 +14,9 @@ class CreateOrganizationsTable extends Migration
     public function up()
     {
         Schema::create('organizations', function (Blueprint $table) {
-            //$table->id();
-            $table->string('name')->nullable( false );
-            $table->string('email')->nullable();
-            $table->string('logo')->nullable();
-            $table->string('website')->nullable();
-            $table->timestamps();
+            $table->index('name');
+            $table->unique('email');
+            $table->unique('website');
         });
     }
 
