@@ -39,6 +39,9 @@
 				<div class="col py-2 border border-right-0">{{ $organization->website }}</div>
 				<div class="col py-2 border">
 					<form action="{{ route( 'organization.destroy', $organization->id ) }}" method="POST">
+						<a href="{{ route( 'employees', $organization->id ) }}" title="View">
+							<i class="fas fa-user-tie text-success fa-lg"></i>
+						</a>
 						<a href="{{ route( 'organization.show', $organization->id ) }}" title="View">
 							<i class="fas fa-eye text-success fa-lg"></i>
 						</a>

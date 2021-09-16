@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\OrganizationController;
+use App\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get( '/organizations', [OrganizationController::class, 'index'])->name('organizations');
 Route::resource( 'organization', OrganizationController::class );
+
+Route::get( '/employees/{oid}', [EmployeeController::class, 'index'])->name('employees');
+Route::get( '/employee/create/{oid}', [EmployeeController::class, 'create'])->name('addemployee');
+Route::resource( 'employee', EmployeeController::class );

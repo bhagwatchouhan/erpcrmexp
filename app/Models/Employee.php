@@ -6,16 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 //use Illuminate\Database\Eloquent\Model;
 use Jenssegers\Mongodb\Eloquent\Model;
 
-class Organization extends Model
+class Employee extends Model
 {
     use HasFactory;
 
 	protected $fillable = [
-		'name', 'email', 'logo', 'website'
+		'org_id', 'first_name', 'last_name', 'email', 'phone'
 	];
-
-    public function employees()
-    {
-        return $this->hasMany(Employee::class);
-    }
 }
