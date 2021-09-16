@@ -5,20 +5,20 @@
 	<div class="container">
 		<div class="clearfix pt-4 pb-2">
 			<div class="float-left">
-				<h2>Organization Details ({{ $organization->name }})</h2>
+				<h2>{{ __('Organization Details') }} ({{ $organization->name }})</h2>
 			</div>
 			<div class="float-right">
-				<a class="btn btn-primary" href="{{ route( 'organization.index' ) }}" title="All Organizations">
+				<a class="btn btn-primary" href="{{ route( 'organization.index' ) }}" title="{{ __('All Organizations')}}">
 					<i class="fa fa-arrow-left"></i>
 				</a>
 			</div>
 		</div>
 		<div class="row pt-3">
 			<div class="col-xs-6 col-sm-6 col-md-6">
-				<strong>Name - </strong> {{ $organization->name }}
+				<strong>{{ __('Name') }} - </strong> {{ $organization->name }}
 			</div>
 			<div class="col-xs-6 col-sm-6 col-md-6">
-				<strong>Logo - </strong>
+				<strong>{{ __('Logo') }} - </strong>
 				@if(!empty($organization->logo))
 					<img class="logo" src="{{ URL::to('/') }}/storage/{{ $organization->logo }}" alt="Logo" />
 				@else
@@ -28,10 +28,10 @@
 		</div>
 		<div class="row pt-3">
 			<div class="col-xs-6 col-sm-6 col-md-6">
-				<strong>Email - </strong> {{ $organization->email }}
+				<strong>{{ __('Email') }} - </strong> {{ $organization->email }}
 			</div>
 			<div class="col-xs-6 col-sm-6 col-md-6">
-				<strong>Website - </strong> {{ $organization->website }}
+				<strong>{{ __('Website') }} - </strong> {{ $organization->website }}
 			</div>
 		</div>
 	</div>

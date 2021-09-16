@@ -5,7 +5,7 @@
 	<div class="container">
 		<div class="clearfix pt-4 pb-2">
 			<div class="float-left">
-				<h2>Add Employee</h2>
+				<h2>{{__( 'Add Employee' )}}</h2>
 			</div>
 			<div class="float-right">
 				<a class="btn btn-primary" href="{{ route( 'employees', $oid ) }}" title="All Employees">

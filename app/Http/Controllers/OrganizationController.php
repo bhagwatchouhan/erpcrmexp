@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Employee;
 use App\Models\Organization;
 use Illuminate\Http\Request;
 
@@ -148,6 +149,9 @@ class OrganizationController extends Controller
      */
     public function destroy(Organization $organization)
     {
+
+		Employee::latest()->where( "org_id", "=", $organization->id )->delete();
+
 		$organization->delete();
 
 		return redirect()->route( 'organization.index' )
