@@ -16,6 +16,7 @@ yarn-error.log
 
 # netbeans project files
 /nbproject
+/.editorconfig
 
 package-lock.json
 composer.lock
