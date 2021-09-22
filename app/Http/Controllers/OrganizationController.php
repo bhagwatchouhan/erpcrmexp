@@ -111,7 +111,7 @@ class OrganizationController extends Controller
     {
 		$request->validate([
 			'name' => 'required|max:200',
-			'email' => 'email|nullable|max:250|unique:organizations,email',
+			'email' => 'email|nullable|max:250|unique:organizations,email,' . $organization->id,
 			'logo' => 'nullable|mimes:jpg,jpeg,png|max:2048|dimensions:min_width=100,min_height=100,ratio=1',
 			'website' => 'url|nullable|max:1024|unique:organizations,website'
 		]);
